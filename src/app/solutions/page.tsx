@@ -24,7 +24,7 @@ export default function Solutions() {
         </motion.div>
       </section>
 
-      <section className="w-full md:hidden flex flex-col pt-4 justify-center gap-12 items-center">
+      <section className="w-full md:hidden flex flex-col pt-4 px-4 justify-center gap-12 items-center">
         <motion.div
           initial={{ opacity: 0, filter: 'blur(16px)', y: 64 }}
           animate={{ opacity: 1, filter: 'blur(0px)', y: 0 }}
@@ -32,7 +32,7 @@ export default function Solutions() {
           className="overflow-hidden"
         >
           <Image
-            src="/images/mobile/11-1.png"
+            src="/images/mobile/11-1.webp"
             alt="Investment visual"
             width={2560}
             height={1440}
@@ -47,7 +47,7 @@ export default function Solutions() {
           className="overflow-hidden"
         >
           <Image
-            src="/images/mobile/11-2.png"
+            src="/images/mobile/11-2.webp"
             alt="Investment visual"
             width={2560}
             height={1440}
@@ -62,7 +62,7 @@ export default function Solutions() {
           className="overflow-hidden"
         >
           <Image
-            src="/images/mobile/11-3.png"
+            src="/images/mobile/11-3.webp"
             alt="Investment visual"
             width={2560}
             height={1440}

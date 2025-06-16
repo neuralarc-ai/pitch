@@ -54,7 +54,7 @@ export default function Technology() {
         </motion.div>
       </section>
 
-      <section className="w-full md:hidden pt-4 flex flex-col justify-center gap-12 items-center">
+      <section className="w-full md:hidden flex flex-col justify-center pt-4 px-4 gap-12 items-center">
         <motion.div
           initial={{ opacity: 0, filter: 'blur(16px)', y: 64 }}
           animate={{ opacity: 1, filter: 'blur(0px)', y: 0 }}
@@ -62,7 +62,7 @@ export default function Technology() {
           className="overflow-hidden"
         >
           <Image
-            src="/images/mobile/05.png"
+            src="/images/mobile/05.webp"
             alt="Investment visual"
             width={2560}
             height={1440}
@@ -77,7 +77,7 @@ export default function Technology() {
           className="overflow-hidden"
         >
           <Image
-            src="/images/mobile/14.png"
+            src="/images/mobile/14.webp"
             alt="Investment visual"
             width={2560}
             height={1440}
@@ -92,7 +92,7 @@ export default function Technology() {
           className="overflow-hidden"
         >
           <Image
-            src="/images/mobile/15.png"
+            src="/images/mobile/15.webp"
             alt="Investment visual"
             width={2560}
             height={1440}

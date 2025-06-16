@@ -69,7 +69,7 @@ export default function InvestmentOpportunity() {
         </motion.div>
       </section>
 
-      <section className="w-full md:hidden flex flex-col justify-center gap-12 items-center">
+      <section className="w-full md:hidden flex flex-col justify-center pt-4 px-4 gap-12 items-center">
         <motion.div
           initial={{ opacity: 0, filter: 'blur(16px)', y: 64 }}
           animate={{ opacity: 1, filter: 'blur(0px)', y: 0 }}
@@ -77,7 +77,7 @@ export default function InvestmentOpportunity() {
           className="overflow-hidden"
         >
           <Image
-            src="/images/mobile/06.png"
+            src="/images/mobile/06.webp"
             alt="Investment visual"
             width={1920}
             height={1080}
@@ -92,7 +92,7 @@ export default function InvestmentOpportunity() {
           className="overflow-hidden"
         >
           <Image
-            src="/images/mobile/13.png"
+            src="/images/mobile/13.webp"
             alt="Investment visual"
             width={1920}
             height={1080}
@@ -107,7 +107,7 @@ export default function InvestmentOpportunity() {
           className="overflow-hidden"
         >
           <Image
-            src="/images/mobile/19.png"
+            src="/images/mobile/19.webp"
             alt="Investment visual"
             width={1920}
             height={1080}
@@ -122,7 +122,7 @@ export default function InvestmentOpportunity() {
           className="overflow-hidden"
         >
           <Image
-            src="/images/mobile/20.png"
+            src="/images/mobile/20.webp"
             alt="Investment visual"
             width={1920}
             height={1080}

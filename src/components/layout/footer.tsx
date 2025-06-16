@@ -58,7 +58,7 @@ export default function Footer() {
           {/* Navigation Links and Contact */}
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-12 space-x-4 text-center md:text-left">
             {navLinks.map((link) => (
-              <Link key={link.href} href={link.href}>
+              <Link key={link.href} href={link.href} className="text-nowrap">
                 <span className="text-base font-medium text-white/80 hover:text-white transition-colors">
                   {link.label}
                 </span>

@@ -54,7 +54,7 @@ export default function Products() {
         </motion.div>
       </section>
 
-      <section className="w-full md:hidden flex flex-col justify-center gap-12 items-center">
+      <section className="w-full pt-4 px-4 md:hidden flex flex-col justify-center gap-12 items-center">
         <motion.div
           initial={{ opacity: 0, filter: 'blur(16px)', y: 64 }}
           animate={{ opacity: 1, filter: 'blur(0px)', y: 0 }}
@@ -62,7 +62,7 @@ export default function Products() {
           className="overflow-hidden"
         >
           <Image
-            src="/images/mobile/07.png"
+            src="/images/mobile/07.webp"
             alt="Investment visual"
             width={1920}
             height={1080}
@@ -77,7 +77,7 @@ export default function Products() {
           className="overflow-hidden"
         >
           <Image
-            src="/images/mobile/09.png"
+            src="/images/mobile/09.webp"
             alt="Investment visual"
             width={1920}
             height={1080}
@@ -92,7 +92,7 @@ export default function Products() {
           className="overflow-hidden"
         >
           <Image
-            src="/images/mobile/10.png"
+            src="/images/mobile/10.webp"
             alt="Investment visual"
             width={1920}
             height={1080}

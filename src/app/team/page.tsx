@@ -39,7 +39,7 @@ export default function Team() {
         </motion.div>
       </section>
 
-      <section className="w-full md:hidden flex flex-col justify-center pt-4 gap-12 items-center">
+      <section className="w-full md:hidden flex flex-col justify-center pt-4 px-4 gap-12 items-center">
         <motion.div
           initial={{ opacity: 0, filter: 'blur(16px)', y: 64 }}
           animate={{ opacity: 1, filter: 'blur(0px)', y: 0 }}
@@ -47,7 +47,7 @@ export default function Team() {
           className="overflow-hidden"
         >
           <Image
-            src="/images/mobile/21.png"
+            src="/images/mobile/21.webp"
             alt="Investment visual"
             width={2560}
             height={1440}
@@ -62,7 +62,7 @@ export default function Team() {
           className="overflow-hidden"
         >
           <Image
-            src="/images/mobile/22.png"
+            src="/images/mobile/22.webp"
             alt="Investment visual"
             width={2560}
             height={1440}
@@ -77,7 +77,7 @@ export default function Team() {
           className="overflow-hidden"
         >
           <Image
-            src="/images/mobile/22-2.png"
+            src="/images/mobile/22-2.webp"
             alt="Investment visual"
             width={2560}
             height={1440}

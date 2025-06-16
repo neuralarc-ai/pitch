@@ -53,7 +53,7 @@ export default function Home() {
           />
         </motion.div>
       </section>
-      <section className="w-full md:hidden flex flex-col gap-12 justify-center items-center">
+      <section className="w-full md:hidden pt-4 px-4 flex flex-col gap-12 justify-center items-center">
         <motion.div
           initial={{ opacity: 0, filter: 'blur(16px)', y: 64 }}
           animate={{ opacity: 1, filter: 'blur(0px)', y: 0 }}
@@ -61,7 +61,7 @@ export default function Home() {
           className="overflow-hidden"
         >
           <Image
-            src="/images/mobile/01.png"
+            src="/images/mobile/01.webp"
             alt="Sleek visual"
             width={1920}
             height={1080}
@@ -76,7 +76,7 @@ export default function Home() {
           className="overflow-hidden"
         >
           <Image
-            src="/images/mobile/02.png"
+            src="/images/mobile/02.webp"
             alt="Sleek visual"
             width={1920}
             height={1080}
@@ -91,7 +91,7 @@ export default function Home() {
           className="overflow-hidden"
         >
           <Image
-            src="/images/mobile/03.png"
+            src="/images/mobile/03.webp"
             alt="Sleek visual"
             width={1920}
             height={1080}
