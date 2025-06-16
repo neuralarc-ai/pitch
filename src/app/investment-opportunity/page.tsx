@@ -14,7 +14,7 @@ export default function InvestmentOpportunity() {
           className="overflow-hidden"
         >
           <Image
-            src="/images/06.png"
+            src="/images/06.webp"
             alt="Investment visual"
             width={2560}
             height={1440}
