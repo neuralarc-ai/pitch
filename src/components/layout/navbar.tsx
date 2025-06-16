@@ -3,14 +3,19 @@
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { NavigationMenu, NavigationMenuList, NavigationMenuItem, NavigationMenuLink } from "@/components/ui/navigation-menu";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { motion } from "framer-motion";
+import { Button } from "@/components/ui/button";
+import { LogOut } from "lucide-react";
+import { supabase } from "@/lib/supabase";
+import type { User } from '@supabase/supabase-js';
 
 export default function Navbar() {
   const pathname = usePathname();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [user, setUser] = useState<User | null>(null);
 
   const navLinks = [
     { href: "/", label: "Home" },
@@ -26,7 +31,7 @@ export default function Navbar() {
   const lineVariants = {
     closed: (i: number) => ({
       rotate: 0,
-      y: i === 0 ? -4 : 4, 
+      y: i === 0 ? -4 : 4,
       opacity: 1,
     }),
     open: (i: number) => ({
@@ -34,6 +39,25 @@ export default function Navbar() {
       y: 0,
       opacity: 1,
     }),
+  };
+
+  useEffect(() => {
+    const getUser = async () => {
+      const { data } = await supabase.auth.getUser();
+      setUser(data.user);
+    };
+    getUser();
+    const { data: listener } = supabase.auth.onAuthStateChange((_event, session) => {
+      setUser(session?.user ?? null);
+    });
+    return () => {
+      listener.subscription.unsubscribe();
+    };
+  }, []);
+
+  const handleLogout = async () => {
+    await supabase.auth.signOut();
+    setUser(null);
   };
 
   return (
@@ -57,21 +81,28 @@ export default function Navbar() {
           </Link>
         </div>
         {/* Desktop Navigation Links (right) */}
-        <NavigationMenu viewport={false} className="hidden xl:flex">
-          <NavigationMenuList>
-            {navLinks.map((link) => (
-              <NavigationMenuItem key={link.href}>
-                <Link href={link.href} passHref>
-                  <NavigationMenuLink 
-                    className={`px-6 py-3 rounded-none text-lg font-semibold ${pathname === link.href ? 'border-b-2 border-primary' : ''}`}
-                  >
-                    {link.label}
-                  </NavigationMenuLink>
-                </Link>
-              </NavigationMenuItem>
-            ))}
-          </NavigationMenuList>
-        </NavigationMenu>
+        <div className="hidden xl:flex items-center gap-4">
+          <NavigationMenu viewport={false}>
+            <NavigationMenuList>
+              {navLinks.map((link) => (
+                <NavigationMenuItem key={link.href}>
+                  <Link href={link.href} passHref>
+                    <NavigationMenuLink
+                      className={`px-6 py-3 rounded-none text-lg font-semibold ${pathname === link.href ? 'border-b-2 border-primary' : ''}`}
+                    >
+                      {link.label}
+                    </NavigationMenuLink>
+                  </Link>
+                </NavigationMenuItem>
+              ))}
+            </NavigationMenuList>
+          </NavigationMenu>
+          {user && (
+            <Button variant="ghost" size="icon" onClick={handleLogout} title="Logout">
+              <LogOut className="w-6 h-6" />
+            </Button>
+          )}
+        </div>
 
         {/* Mobile Navigation (Hamburger Icon + Dropdown) */}
         <div className="xl:hidden flex items-center">
@@ -101,6 +132,13 @@ export default function Navbar() {
                     </Link>
                   </DropdownMenuItem>
                 ))}
+                {user && (
+                  <DropdownMenuItem asChild>
+                    <Button variant="outline" className="w-full mt-2" onClick={handleLogout}>
+                      <LogOut className="w-5 h-5 mr-2" /> Logout
+                    </Button>
+                  </DropdownMenuItem>
+                )}
               </div>
             </DropdownMenuContent>
           </DropdownMenu>
