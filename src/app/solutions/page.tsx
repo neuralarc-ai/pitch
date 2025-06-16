@@ -10,7 +10,7 @@ export default function Solutions() {
         <motion.div
           initial={{ opacity: 0, filter: 'blur(16px)', y: 64 }}
           animate={{ opacity: 1, filter: 'blur(0px)', y: 0 }}
-          transition={{ duration: 1.2, ease: 'easeInOut' }}
+          transition={{ duration: 0.8, ease: 'easeInOut', delay: 0.1 }}
           className="overflow-hidden"
         >
           <Image

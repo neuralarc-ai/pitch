@@ -1,5 +1,9 @@
+'use client';
+
 import Link from "next/link";
 import Image from "next/image";
+import { motion, useInView, useAnimation } from "framer-motion";
+import { useEffect, useRef } from "react";
 
 export default function Footer() {
   const navLinks = [
@@ -7,13 +11,33 @@ export default function Footer() {
     { href: "/products", label: "Products" },
     { href: "/solutions", label: "Solutions" },
     { href: "/agents", label: "Agents" },
-    { href: "/investment-opportunity", label: "Opportunity" },
+    { href: "/investment-opportunity", label: "Investment Opportunity" },
     { href: "/technology", label: "Technology" },
     { href: "/team", label: "Team" },
   ];
 
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, amount: 0.2 });
+  const controls = useAnimation();
+
+  useEffect(() => {
+    if (isInView) {
+      controls.start("visible");
+    }
+  }, [isInView, controls]);
+
   return (
-    <footer className="w-full rounded-t-2xl border-t-5 border-t-[#757372] flex justify-center bg-[#1E1E1E] text-white py-12 px-4">
+    <motion.footer
+      ref={ref}
+      variants={{
+        hidden: { opacity: 0, y: 50 },
+        visible: { opacity: 1, y: 0 },
+      }}
+      initial="hidden"
+      animate={controls}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      className="w-full rounded-t-2xl border-t-5 border-t-[#757372] flex justify-center bg-[#1E1E1E] text-white py-12 px-4"
+    >
       <div className="w-full max-w-[1920px] flex flex-col items-center md:items-start">
         <div className="flex flex-col md:flex-row md:justify-between w-full mb-8">
           {/* Logo and Tagline */}
@@ -56,6 +80,6 @@ export default function Footer() {
           <span>Copyright 2025. All rights reserved.</span>
         </div>
       </div>
-    </footer>
+    </motion.footer>
   );
 }

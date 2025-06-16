@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { NavigationMenu, NavigationMenuList, NavigationMenuItem, NavigationMenuLink } from "@/components/ui/navigation-menu";
+import { motion } from "framer-motion";
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -15,11 +16,17 @@ export default function Navbar() {
     { href: "/solutions", label: "Solutions" },
     { href: "/agents", label: "Agents" },
     { href: "/technology", label: "Technology" },
+    { href: "/responsible-ai", label: "Responsible AI" },
     { href: "/team", label: "Team" },
   ];
 
   return (
-    <nav className="w-full flex justify-center px-4 py-6">
+    <motion.nav
+      initial={{ opacity: 0, y: -20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, ease: "easeInOut" }}
+      className="w-full flex justify-center px-4 py-6"
+    >
       <div className="flex items-center justify-between w-full max-w-[1920px]">
         {/* Logo (left) */}
         <div className="flex items-center">
@@ -50,6 +57,6 @@ export default function Navbar() {
           </NavigationMenuList>
         </NavigationMenu>
       </div>
-    </nav>
+    </motion.nav>
   );
 }
