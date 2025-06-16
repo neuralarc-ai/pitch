@@ -14,7 +14,7 @@ export default function Solutions() {
           className="overflow-hidden"
         >
           <Image
-            src="/images/11.png"
+            src="/images/11.webp"
             alt="Investment visual"
             width={2560}
             height={1440}

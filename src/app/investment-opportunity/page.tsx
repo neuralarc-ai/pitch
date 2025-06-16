@@ -29,7 +29,7 @@ export default function InvestmentOpportunity() {
           className="overflow-hidden"
         >
           <Image
-            src="/images/13.png"
+            src="/images/13.webp"
             alt="Investment visual"
             width={2560}
             height={1440}
@@ -44,7 +44,7 @@ export default function InvestmentOpportunity() {
           className="overflow-hidden"
         >
           <Image
-            src="/images/19.png"
+            src="/images/19.webp"
             alt="Investment visual"
             width={2560}
             height={1440}
@@ -59,7 +59,7 @@ export default function InvestmentOpportunity() {
           className="overflow-hidden"
         >
           <Image
-            src="/images/20.png"
+            src="/images/20.webp"
             alt="Investment visual"
             width={2560}
             height={1440}

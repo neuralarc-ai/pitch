@@ -14,7 +14,7 @@ export default function Agents() {
           className="overflow-hidden"
         >
           <Image
-            src="/images/08.png"
+            src="/images/08.webp"
             alt="Investment visual"
             width={2560}
             height={1440}
@@ -29,7 +29,7 @@ export default function Agents() {
           className="overflow-hidden"
         >
           <Image
-            src="/images/12.png"
+            src="/images/12.webp"
             alt="Investment visual"
             width={2560}
             height={1440}

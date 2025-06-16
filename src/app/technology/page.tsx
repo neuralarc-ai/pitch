@@ -14,7 +14,7 @@ export default function Technology() {
           className="overflow-hidden"
         >
           <Image
-            src="/images/05.png"
+            src="/images/05.webp"
             alt="Investment visual"
             width={2560}
             height={1440}
@@ -29,7 +29,7 @@ export default function Technology() {
           className="overflow-hidden"
         >
           <Image
-            src="/images/14.png"
+            src="/images/14.webp"
             alt="Investment visual"
             width={2560}
             height={1440}
@@ -44,7 +44,7 @@ export default function Technology() {
           className="overflow-hidden"
         >
           <Image
-            src="/images/15.png"
+            src="/images/15.webp"
             alt="Investment visual"
             width={2560}
             height={1440}

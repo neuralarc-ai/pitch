@@ -14,7 +14,7 @@ export default function Team() {
           className="overflow-hidden"
         >
           <Image
-            src="/images/21.png"
+            src="/images/21.webp"
             alt="Investment visual"
             width={2560}
             height={1440}
@@ -29,7 +29,7 @@ export default function Team() {
           className="overflow-hidden"
         >
           <Image
-            src="/images/22.png"
+            src="/images/22.webp"
             alt="Investment visual"
             width={2560}
             height={1440}

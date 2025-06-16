@@ -14,7 +14,7 @@ export default function Products() {
           className="overflow-hidden"
         >
           <Image
-            src="/images/07.png"
+            src="/images/07.webp"
             alt="Investment visual"
             width={2560}
             height={1440}
@@ -29,7 +29,7 @@ export default function Products() {
           className="overflow-hidden"
         >
           <Image
-            src="/images/09.png"
+            src="/images/09.webp"
             alt="Investment visual"
             width={2560}
             height={1440}
@@ -44,7 +44,7 @@ export default function Products() {
           className="overflow-hidden"
         >
           <Image
-            src="/images/10.png"
+            src="/images/10.webp"
             alt="Investment visual"
             width={2560}
             height={1440}

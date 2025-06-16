@@ -14,7 +14,7 @@ export default function ResponsibleAI() {
           className="overflow-hidden"
         >
           <Image
-            src="/images/16.png"
+            src="/images/16.webp"
             alt="Investment visual"
             width={2560}
             height={1440}
@@ -29,7 +29,7 @@ export default function ResponsibleAI() {
           className="overflow-hidden"
         >
           <Image
-            src="/images/17.png"
+            src="/images/17.webp"
             alt="Investment visual"
             width={2560}
             height={1440}
@@ -44,7 +44,7 @@ export default function ResponsibleAI() {
           className="overflow-hidden"
         >
           <Image
-            src="/images/18.png"
+            src="/images/18.webp"
             alt="Investment visual"
             width={2560}
             height={1440}

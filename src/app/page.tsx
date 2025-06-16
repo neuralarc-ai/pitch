@@ -14,7 +14,7 @@ export default function Home() {
           className="overflow-hidden"
         >
           <Image
-            src="/images/01.png"
+            src="/images/01.webp"
             alt="Sleek visual"
             width={2560}
             height={1440}
@@ -29,7 +29,7 @@ export default function Home() {
           className="overflow-hidden"
         >
           <Image
-            src="/images/03.png"
+            src="/images/03.webp"
             alt="Sleek visual"
             width={2560}
             height={1440}
@@ -44,7 +44,7 @@ export default function Home() {
           className="overflow-hidden"
         >
           <Image
-            src="/images/04.png"
+            src="/images/04.webp"
             alt="Sleek visual"
             width={2560}
             height={1440}
