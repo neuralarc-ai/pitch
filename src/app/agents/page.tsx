@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 export default function Agents() {
   return (
     <main className="flex max-w-[1920px] mx-auto flex-col items-center justify-between px-4 pb-12">
-      <section className="w-full hidden  md:flex md:flex-col justify-center gap-12 items-center">
+      <section className="w-full hidden md:flex md:flex-col justify-center gap-12 items-center">
         <motion.div
           initial={{ opacity: 0, filter: 'blur(16px)', y: 64 }}
           animate={{ opacity: 1, filter: 'blur(0px)', y: 0 }}
@@ -39,7 +39,7 @@ export default function Agents() {
         </motion.div>
       </section>
 
-      <section className="w-full hidden pt-4 px-4 md:flex md:flex-col justify-center gap-12 items-center">
+      <section className="w-full md:hidden pt-4 px-4 flex flex-col justify-center gap-12 items-center">
         <motion.div
           initial={{ opacity: 0, filter: 'blur(16px)', y: 64 }}
           animate={{ opacity: 1, filter: 'blur(0px)', y: 0 }}
