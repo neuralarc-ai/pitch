@@ -20,7 +20,7 @@ export default function Footer() {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
       viewport={{ once: true, amount: 0.3 }}
-      className="w-full flex justify-center pb-8 pt-12 bg-[#2F2C28] rounded-t-2xl shadow-[0px_-8px_0px_0px_#7E7367] text-[#AFAFAF] px-4"
+      className="w-full opacity-0 flex justify-center pb-8 pt-12 bg-[#2F2C28] rounded-t-2xl shadow-[0px_-8px_0px_0px_#7E7367] text-[#AFAFAF] px-4"
     >
       <div className="w-full max-w-[1920px] flex flex-col items-center md:gap-12">
         <div className="flex flex-col md:flex-row justify-between items-center w-full pb-6 ">
